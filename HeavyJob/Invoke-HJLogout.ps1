@@ -26,7 +26,7 @@ function Invoke-HJLogout {
     $FileList = Invoke-Expression "& C:\Windows\System32\openfiles.exe /query /s $($Server) /fo CSV" | 
         ConvertFrom-Csv | Select-Object "ID","Accessed By","Open File (Path\executable)"
 
-    ##This closes ALL files open with HeavyJob in the folder path. Tweak this to match logic that fits your organization's folder path naming convention.    
+    ##This closes ALL files open with HeavyJob in the file path. Tweak this to match logic that fits your organization's folder path naming convention.    
     $FilteredList = ($FileList | Where-Object {($_."Open File (Path\executable)" -Like "*heavyjob*" -and $_."Accessed By" -Like $($User + "*"))} | Select-Object "ID")  
     
     ##Close open files on the file server
