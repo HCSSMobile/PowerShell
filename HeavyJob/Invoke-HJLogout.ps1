@@ -4,13 +4,13 @@ function Invoke-HJLogout {
 			[Parameter(
 				Mandatory=$True,
 				HelpMessage="Please enter the partial Active Directory Username:",
-                Position=1
-            )][string]$User, 
-            [Parameter(
+                		Position=1
+            			)][string]$User, 
+            		[Parameter(
 				Mandatory=$True,
 				HelpMessage="Please enter the file server's name that HeavyJob is hosted on:",
-                Position=2
-            )][string]$Server
+                		Position=2
+            			)][string]$Server
         )
 
     $ErrorActionPreference = "SilentlyContinue"
