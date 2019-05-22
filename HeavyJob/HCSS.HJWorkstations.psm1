@@ -36,7 +36,7 @@ function Invoke-HJDeployment {
             [string] $sourceHost,        
             [Parameter(Position=1,mandatory=$true,HelpMessage="Please an array of hosts to deploy to")]
             [string] $targetHost,
-            [Parameter(Position=0,mandatory=$true,HelpMessage="Example C:\HeavyJobWS")]
+            [Parameter(Position=2,mandatory=$true,HelpMessage="Example C:\HeavyJobWS")]
             [string] $desiredBinPath)
     
         process{
